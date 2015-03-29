@@ -1,4 +1,5 @@
 #include <bod2.h>
+
 void main()
 {
    char volt(T), volt(P);
@@ -8,19 +9,19 @@ void main()
 while(1)
 26      {
 28         set_adc_channel(0);
-29         n=read_adc();
+29         volt(T)=read_adc();
 30         set_adc_channel(1);
-31         k=read_adc(); 
-34         volt1=25*volt(T)+15.8;
-35         volt2=100*volt(P)+20.5;
-38         if((volt1>25 && volt1<50){
-            if(volt2>100 && volt2<200){
-40            printf("Hewiin \r\n");
+31         volt(P)=read_adc(); 
+34         Temp=25*volt(T)+15.8;
+35         Pre=100*volt(P)+20.5;
+38         if(Temp>25 && Temp<50){
+            if(Pre>100 && Pre<200){
+40            printf("NORMAL\r\n");
 41         }
 42         else
 43         {
 44            output_toggle(led);
-45            printf("warning \r\n");
+45            printf("WARNING\r\n");
 46            delay_ms(300);
 47         }
 48      }
