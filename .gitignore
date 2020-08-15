@@ -1,0 +1,25 @@
+#include <main.h>
+#define Alham=0,019
+
+
+void main()
+{
+char adc_value;
+float volt;
+setup_adc_port(AN0_AN1_A3_REF);
+setup_adc(ADC_CLOCK_INTERNAL);
+set_adc_channel(0);
+while(1){
+adc_vlaue=read_adc();
+volt=adc_value*Alham ;
+if(volt>1,5&&volt<3){
+printf("Normal");
+if(volt<1,5){
+printf("lower limit");
+if(volt>3){
+printf("Upper limit");
+Delay_ms(300);
+}
+}
+}
+}
